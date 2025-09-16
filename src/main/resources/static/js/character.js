@@ -1398,3 +1398,40 @@ function buildRoll20Json() {
     return json
 }
 
+function onClickRerollAllStats() {
+    try {
+        onClickRerollBaseStats()
+        onClickRerollLvlUpPoints()
+        console.log("Reroll All Stats")
+    } catch (error) {
+        buildToast("Oops! Something went wrong when rerolling all Stats.")
+        console.log(error)
+    }
+}
+
+function onClickRerollBaseStats() {
+    try {
+        console.log("Reroll Base Stats")
+    } catch (error) {
+        buildToast("Oops! Something went wrong when rerolling base Stats.")
+        console.log(error)
+    }
+}
+
+function onClickRerollLvlUpPoints() {
+    try {
+        const stats = ["hp", "atk", "def", "spatk", "spdef", "spd"];
+
+        stats.forEach(stat => {
+            const $statsLvlUpInput = $(`#char-stat-${stat}-lvlup`);
+            if ($statsLvlUpInput.length) {
+                $statsLvlUpInput.val(0);
+                $statsLvlUpInput.trigger('input');
+                $statsLvlUpInput.trigger('change');
+            }
+        });
+    } catch (error) {
+        buildToast("Oops! Something went wrong when resetting level-up points.");
+        console.error(error);
+    }
+}
