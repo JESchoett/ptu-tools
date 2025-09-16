@@ -47,6 +47,17 @@
                             <a class="dropdown-item" href="#" onclick="onClickCopyR20ToClipboard()">Copy Roll20 JSON to clipboard</a>
                         </div>
                     </li>
+                    <li class="nav-item d-lg-none dropdown">
+                        <button type="button" class="nav-link btn btn-outline-danger dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons-outlined">cached</span> Reroll-Stats
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" onclick="onClickRerollAllStats()">Reroll all Stats</a>
+                            <a class="dropdown-item" href="#" onclick="onClickRerollBaseStats()">Reroll Base Stats</a>
+                            <a class="dropdown-item" href="#" onclick="onClickRerollLvlUpPoints()">Reroll Lvl. Up Points</a>
+                        </div>
+                    </li>
                     <li class="nav-item d-lg-none">
                         <hr class="dropdown-divider border-default">
                     </li>
@@ -125,6 +136,17 @@
                        onclick="onClickSaveToGoogleDrive()">Save to Google Drive</a>
                     <a class="dropdown-item" href="#" onclick="onClickSaveAsToGoogleDrive()">Save As to Google Drive</a>
                     <a class="dropdown-item" href="#" onclick="onClickCopyR20ToClipboard()">Copy Roll20 JSON to clipboard</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-outline-danger d-none d-lg-inline-block dropdown-toggle"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="material-icons-outlined">cached</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" onclick="onClickRerollAllStats()">Reroll all Stats</a>
+                    <a class="dropdown-item" href="#" onclick="onClickRerollBaseStats()">Reroll Base Stats</a>
+                    <a class="dropdown-item" href="#" onclick="onClickRerollLvlUpPoints()">Reroll Lvl. Up Points</a>
                 </div>
             </div>
 
